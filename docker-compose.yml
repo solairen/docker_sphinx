@@ -1,0 +1,10 @@
+version: '3.0'
+
+services:
+  sphinx:
+    image: moleszek/sphinx:1.0
+    tty: true
+    container_name: sphinxBuilder
+    working_dir: /home
+    volumes:
+      - localFolderPath:/home/

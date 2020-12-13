@@ -6,7 +6,7 @@ RUN mkdir /sphinx
 WORKDIR /sphinx
 
 RUN pip3 install sphinx
-RUN pip3 insall pandoc
+RUN pip3 install pandoc
 RUN apk add --no-cache inkscape
 RUN pip3 install sphinxcontrib-confluencebuilder
 RUN pip3 install sphinxcontrib-svg2pdfconverter

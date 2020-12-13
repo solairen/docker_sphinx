@@ -5,12 +5,12 @@ LABEL maintainer="michal.oleszek@outlook.com"
 RUN mkdir /sphinx
 WORKDIR /sphinx
 
-RUN pip install sphinx
-RUN pip insall pandoc
+RUN pip3 install sphinx
+RUN pip3 insall pandoc
 RUN apk add --no-cache inkscape
-RUN pip install sphinxcontrib-confluencebuilder
-RUN pip install sphinxcontrib-svg2pdfconverter
-RUN pip install sphinx-autobuild
-RUN pip install sphinx_rtd_theme
+RUN pip3 install sphinxcontrib-confluencebuilder
+RUN pip3 install sphinxcontrib-svg2pdfconverter
+RUN pip3 install sphinx-autobuild
+RUN pip3 install sphinx_rtd_theme
 
 ENTRYPOINT [ "sphinx-build", "-aE" ]

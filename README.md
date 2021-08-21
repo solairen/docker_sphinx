@@ -9,8 +9,8 @@ This docker container contains:
 * docker build . -t {tagname}
 
 #### Download from Docker repository:
-* docker pull moleszek/sphinx:1.0
+* docker pull moleszek/sphinx:latest
 
 ### How to run:
 #### To run sphinx builder using sphinx Docker image directly:
-* docker run -it --rm -v {localFolderPath}:/sphinx moleszek/sphinx:1.0 . _build/html
+* docker run -it --rm -v {localFolderPath}:/sphinx moleszek/sphinx:latest . _build/html

@@ -1,16 +1,19 @@
-FROM moleszek/flake:1.3
+FROM python:3.10-slim
 
-LABEL maintainer="michal.oleszek@outlook.com"
+LABEL maintainer="mrsolairen@outlook.com"
 
-RUN mkdir /sphinx
-WORKDIR /sphinx
+ARG workdir=/sphinx
 
-RUN pip3 install sphinx
-RUN pip3 install pandoc
-RUN apk add --no-cache inkscape
-RUN pip3 install sphinxcontrib-confluencebuilder
-RUN pip3 install sphinxcontrib-svg2pdfconverter
-RUN pip3 install sphinx-autobuild
-RUN pip3 install sphinx_rtd_theme
+RUN mkdir ${workdir}
+WORKDIR ${workdir}
+
+RUN apt update && apt -y install inkscape \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/
+
+COPY requirements.txt ${workdir}
+
+RUN pip install -r requirements.txt
+RUN rm requirements.txt
 
 ENTRYPOINT [ "sphinx-build", "-aE" ]

@@ -7,7 +7,7 @@ ARG workdir=/sphinx
 RUN mkdir ${workdir}
 WORKDIR ${workdir}
 
-RUN apt update && apt -y install inkscape \
+RUN apt update && apt -y install inkscape git \
     && apt clean \
     && rm -rf /var/lib/apt/lists/
 

@@ -1,5 +1,5 @@
 sphinx==4.4.0
-pandoc==2.0.1
+pandoc==2.1
 sphinxcontrib-confluencebuilder==1.7.1
 sphinxcontrib-svg2pdfconverter==1.2.0
 sphinx-autobuild==2021.3.14

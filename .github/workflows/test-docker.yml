@@ -17,14 +17,17 @@ jobs:
     runs-on: ubuntu-latest
     container: docker:stable
     steps:
-    - name: Checkout ${{ github.repository }} repository
-      uses: actions/checkout@v3
+    - name: Set up buidlix
+      uses: docker/setup-buildx-action@v1
+      id: buildx
       with:
-        repository: ${{ github.repository }}
-        ref: ${{ github.ref }}
-        token: ${{ env.GH_TOKEN }}
-    - name: Build dockerfile
-      run: docker build -t sphinx -f Dockerfile .
+        install: true
+    - name: Test build
+      uses: docker/build-push-action@v2
+      with:
+        file: Dockerfile
+        push: false
+        tags: sphinx:test
   notify_on_success:
     name: Send notification on success
     needs:

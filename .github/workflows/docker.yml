@@ -10,7 +10,7 @@ env:
   DOCKER_USER: ${{ secrets.docker_username }}
   DOCKER_TOKEN: ${{ secrets.docker_token }}
   DISCORD: ${{ secrets.discord_webhook }}
-  VERSION: ${{ ${{ github.event.inputs.version }} }}
+  VERSION: ${{ github.event.inputs.version }}
 
 jobs:
   build:

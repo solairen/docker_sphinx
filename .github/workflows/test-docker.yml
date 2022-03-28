@@ -22,7 +22,7 @@ jobs:
       id: buildx
       with:
         install: true
-    - name: Build and push
+    - name: Test build
       uses: docker/build-push-action@v2
       with:
         file: Dockerfile

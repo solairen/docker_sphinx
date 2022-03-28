@@ -17,8 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     container: docker:stable
     steps:
-    - name: Build dockerfile
-      run: docker build -t sphinx -f Dockerfile .
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        file: Dockerfile
+        push: false
+        tags: sphinx:test
   notify_on_success:
     name: Send notification on success
     needs:

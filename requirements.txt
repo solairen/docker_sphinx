@@ -1,4 +1,4 @@
-sphinx==5.0.0
+sphinx==5.0.1
 pandoc==2.2
 sphinxcontrib-confluencebuilder==1.8.0
 sphinxcontrib-svg2pdfconverter==1.2.0

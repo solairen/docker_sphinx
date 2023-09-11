@@ -1,6 +1,6 @@
 sphinx==7.2.5
 pandoc==2.3
-sphinxcontrib-confluencebuilder==2.2.0
+sphinxcontrib-confluencebuilder==2.3.0
 sphinx-autobuild==2021.3.14
 furo==2023.8.19
 myst_parser==2.0.0

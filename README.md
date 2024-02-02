@@ -1,16 +1,19 @@
 ### About:
-* OS: Python 3.10
+* OS: Python 3.12.1-slim
 
 This docker container contains:
 * [Sphinx](https://www.sphinx-doc.org/en/master/)
-* [Pandoc](https://pandoc.org/)
-* [Atlassian Confluence Builder](https://sphinxcontrib-confluencebuilder.readthedocs.io/en/stable/)
-* [Sphinx SVG to PDF Converter](https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter)
-* [Sphinx Autobuild](https://github.com/executablebooks/sphinx-autobuild)
-* [Sphinx RTD Theme](https://pypi.org/project/sphinx-rtd-theme/)
+* [Furo](https://pypi.org/project/furo/)
+* [Myst parser](https://pypi.org/project/myst-parser/)
+* [Sphinx copybutton](https://pypi.org/project/sphinx-copybutton/)
+* [Sphinx design](https://pypi.org/project/sphinx-design2/)
+* [Sphinx inline tabs](https://pypi.org/project/sphinx-inline-tabs/)
 
 ### How to build or download:
 #### To build docker images from Dockerfile:
+
+> To run sphinx with preinstalled furo theme use moleszek/sphinx-furo:latest
+
 ```bash
 docker build . -t {tagname}
 ```

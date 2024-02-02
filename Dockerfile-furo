@@ -6,7 +6,7 @@ LABEL sphinx=7.2.6
 
 ARG workdir=/sphinx
 
-COPY requirements.txt /
+COPY requirements-furo.txt /requirements.txt
 
 RUN apt-get update \
     && apt-get upgrade -y \

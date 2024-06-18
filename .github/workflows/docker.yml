@@ -22,25 +22,25 @@ jobs:
         username: ${{ env.DOCKER_USER }}
         password: ${{ env.DOCKER_TOKEN }}
     - name: Build and push
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile
         push: true
         tags: moleszek/sphinx:${{ env.VERSION }}
     - name: Build and push
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile
         push: true
         tags: moleszek/sphinx:latest
     - name: Build and push with Furo theme
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile-furo
         push: true
         tags: moleszek/sphinx-furo:${{ env.VERSION }}
     - name: Build and push with Furo theme
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile-furo
         push: true

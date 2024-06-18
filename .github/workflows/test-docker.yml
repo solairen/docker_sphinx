@@ -22,13 +22,13 @@ jobs:
       with:
         install: true
     - name: Test build
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile
         push: false
         tags: sphinx:test
     - name: Test build
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile-furo
         push: false
